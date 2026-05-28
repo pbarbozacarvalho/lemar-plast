@@ -36,7 +36,7 @@ try {
   exit 1
 }
 
-Write-Host "Lemar-Plast iniciado en $prefix"
+Write-Host "Le-mar Plast iniciado en $prefix"
 Write-Host "Abri http://localhost:$port/index.html"
 Write-Host "Deja esta ventana abierta mientras probas el catalogo."
 Write-Host "Presiona Ctrl+C para detenerlo."

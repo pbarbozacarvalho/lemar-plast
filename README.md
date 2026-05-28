@@ -14,8 +14,8 @@ En `app.js`, editar el objeto `CONFIG`:
 
 ```js
 const CONFIG = {
-  storeName: "Lemar-Plast",
-  whatsappNumber: "5491159624352",
+  storeName: "Le-mar Plast",
+  whatsappNumber: "5491154154625",
   googleSheetCsvUrl: "",
   currency: "ARS",
   locale: "es-AR",
