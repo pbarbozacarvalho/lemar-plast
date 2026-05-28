@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo de ofertas</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/lemarplast.png" alt="Lemar-Plast">
+      </div>
+      <div class="brand-copy">
+        <p class="eyebrow">Catálogo actualizado</p>
+        <h1 id="storeName">Ofertas</h1>
+      </div>
+      <a class="whatsapp-link" id="directWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </header>
+
+    <main class="layout">
+      <section class="featured" aria-label="Ofertas destacadas">
+        <div class="section-title">
+          <p class="eyebrow">Destacados</p>
+          <h2>Ofertas para pedir hoy</h2>
+        </div>
+        <div class="carousel">
+          <button class="carousel-control" id="prevSlide" type="button" aria-label="Oferta anterior">&lt;</button>
+          <div id="carouselTrack" class="carousel-track"></div>
+          <button class="carousel-control" id="nextSlide" type="button" aria-label="Oferta siguiente">&gt;</button>
+        </div>
+        <div id="carouselDots" class="carousel-dots" aria-label="Seleccionar oferta destacada"></div>
+      </section>
+
+      <aside class="cart-panel" aria-label="Pedido">
+        <div class="cart-header">
+          <h2>Pedido</h2>
+          <button id="clearCart" type="button">Vaciar</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-empty" id="emptyCart">Todavía no agregaste productos.</div>
+        <div class="cart-total">
+          <span>Total estimado</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+        <label class="field">
+          <span>Nombre</span>
+          <input id="customerName" type="text" placeholder="Tu nombre">
+        </label>
+        <label class="field">
+          <span>Entrega</span>
+          <textarea id="deliveryDetails" rows="3" placeholder="Dirección, retiro o comentario"></textarea>
+        </label>
+        <button id="sendOrder" class="primary-action" type="button">Enviar pedido por WhatsApp</button>
+      </aside>
+
+      <section class="catalog">
+        <div class="section-title">
+          <p class="eyebrow">Productos</p>
+          <h2>Todas las opciones</h2>
+        </div>
+        <div class="filters">
+          <input id="searchInput" type="search" placeholder="Buscar producto" autocomplete="off">
+          <select id="categoryFilter" aria-label="Filtrar por categoría">
+            <option value="">Todas las categorías</option>
+          </select>
+        </div>
+        <div id="statusMessage" class="status">Cargando productos...</div>
+        <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <template id="productTemplate">
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img class="product-image" alt="">
+          <span class="stock-badge"></span>
+        </div>
+        <div class="product-body">
+          <p class="product-category"></p>
+          <h3 class="product-name"></h3>
+          <p class="product-description"></p>
+          <div class="product-footer">
+            <strong class="product-price"></strong>
+            <button class="add-button" type="button">Agregar</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
